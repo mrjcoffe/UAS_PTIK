@@ -27,8 +27,5 @@ int main()
             cout<< "Angka "<<cari<<" didalam indeks ke "<<maks+1<<endl;
         }
     }
-    if(nilai[maks]!=cari){
-        cout<< "Angka Tidak Di temukan"<<endl;
-    }
     return 0;
 }
