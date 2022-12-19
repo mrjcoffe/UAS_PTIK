@@ -1,39 +1,35 @@
 #include <iostream>
-#include <conio.h>
+
 using namespace std;
 
-int jumlah, asc;
+int main()
+{
+    int angka, maks, cari, awal, nilai[100];
 
-main(){
-    cout << "Masukan jumlah bilangan : ";
-    cin >> jumlah;
-
-    int nilai[jumlah];
-
-    for(int i=0; i<jumlah; i++){
-        cout << "Masukan bilagan ke- " << (i+1) << " : ";
-        cin >> nilai[i];
+    cout<< "Masukkan Banyaknya Angka : ";
+    cin>>angka;
+    for(maks=1; maks<=angka; maks++){
+        cout<<"masukkan angka ke-"<<maks<<" = ";
+        cin>>nilai[maks];
     }
 
-    for(int c=1;c<jumlah;c++)
-    {
-        for(int d=0;d<jumlah-c;d++)
-        {
-            if(nilai[d] > nilai[d+1])
-            {
-                asc=nilai[d];
-                nilai[d]=nilai[d+1];
-                nilai[d+1]=asc;
-            }
+    cout<< "Hasil Setelah diurutkan : "<<endl;
+    for(maks=1; maks<=angka; maks++){
+        cout<<nilai[maks]<<" | ";
+    }
+    cout<<endl;
+
+    cout<< "Masukkan Angka yang Ingin Dicari : ";
+    cin>>cari;
+    awal = 0;
+    for(maks=1; maks<= angka; maks++){
+        if(nilai[maks]==cari){
+            awal = 1;
+            cout<< "Angka "<<cari<<" didalam indeks ke "<<maks+1<<endl;
         }
     }
-
-    cout << endl << "Hasil Pengurutan Adalah";
-    for(int i=0;i<jumlah;i++)
-    {
-        cout << " " << nilai[i];
+    if(nilai[maks]!=cari){
+        cout<< "Angka Tidak Di temukan"<<endl;
     }
-    cout << endl;
-    getch();
     return 0;
 }
