@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
+int main() {
     int angka, maks, cari, nilai[100];
 
     cout<< "Masukkan Banyaknya Angka : ";
